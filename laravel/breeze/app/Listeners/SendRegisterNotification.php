@@ -23,8 +23,9 @@ class SendRegisterNotification
     {
 
         $user = $event->user;
+        $adminEmail = config('admin.email');
 
-        Mail::to('admin@test.com')
+        Mail::to($adminEmail)
             ->send(new UserRegistered($user));
     }
 }
