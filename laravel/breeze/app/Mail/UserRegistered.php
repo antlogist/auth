@@ -39,7 +39,7 @@ class UserRegistered extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'mail.new-user',
+            markdown: 'vendor.notifications.new-user',
         );
     }
 
